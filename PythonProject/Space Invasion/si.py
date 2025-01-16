@@ -58,7 +58,7 @@ for e in range (number_of_enemies):
     img_enemy.append( pygame.image.load("nihad.jpg"))
     enemy_x.append (random.randint(0, 736))
     enemy_y.append(  random.randint(50, 200))
-    enemy_x_change.append( 0.2)
+    enemy_x_change.append( 0.1)
     enemy_y_change.append( 50)
 
 #bullet variable
@@ -66,7 +66,7 @@ img_bullet = pygame.image.load("banana.png")
 bullet_x = 0
 bullet_y =  500
 bullet_x_change = 0
-bullet_y_change = 0.5
+bullet_y_change = 0.8
 visible_bullet = False
 
 
@@ -144,10 +144,10 @@ while is_running:
 
         # Keep Enemy Inside Screen
         if enemy_x[enem] <= 0:
-            enemy_x_change[enem] = 0.2
+            enemy_x_change[enem] = 0.1
             enemy_y[enem] += enemy_y_change[enem]
         elif enemy_x[enem] >= 736:
-            enemy_x_change[enem] = -0.2
+            enemy_x_change[enem] = -0.1
             enemy_y[enem] += enemy_y_change[enem]
 
         # Collision
